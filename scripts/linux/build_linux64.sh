@@ -8,7 +8,7 @@ BUILD_CONFIGURATION=$2 # Debug / Release
 BUILD_THREAD=4
 
 PWD=`pwd`
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR=$(dirname $(readlink -f $0))
 
 BUILD_DIR=$DIR/../../build
 TARGET_DIR=linux64
